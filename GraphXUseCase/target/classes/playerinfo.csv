@@ -1,0 +1,16 @@
+StartEdge,EndEdge,Player,Association
+120,121,Hokaido,Like
+121,122,Sam,friend
+122,120,Tony,follow
+123,124,Johnson,Like
+124,125,Elizabeth,follow
+125,123,Terry,Like
+126,127,Joel,follow
+127,128,Tifiny,friend
+128,129,Hana,friend
+129,130,Bianaka,friend
+130,131,Timothy,friend
+131,132,Elan,Like
+132,133,Jack,Like
+133,134,George,Like
+134,135,Frank,Like

@@ -1,0 +1,71 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>examplerunagain</groupId>
+  <artifactId>GraphXPerformanceTest</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>GraphXPerformanceTest</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+    
+    
+    <!-- https://mvnrepository.com/artifact/org.apache.spark/spark-core -->
+<dependency>
+    <groupId>org.apache.spark</groupId>
+    <artifactId>spark-core_2.12</artifactId>
+    <version>2.4.1</version>
+</dependency>
+    
+    <!-- https://mvnrepository.com/artifact/org.apache.spark/spark-sql -->
+<dependency>
+    <groupId>org.apache.spark</groupId>
+    <artifactId>spark-sql_2.12</artifactId>
+    <version>2.4.1</version>
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/org.apache.spark/spark-graphx -->
+<dependency>
+    <groupId>org.apache.spark</groupId>
+    <artifactId>spark-graphx_2.12</artifactId>
+    <version>2.4.1</version>
+</dependency>
+  </dependencies>
+  
+  <build>
+        <plugins>
+            <plugin>
+                <groupId>org.scala-tools</groupId>
+                <artifactId>maven-scala-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>compile</goal>
+                            <goal>testCompile</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <sourceDir>src/main/scala</sourceDir>
+                    <jvmArgs>
+                        <jvmArg>-Xms64m</jvmArg>
+                        <jvmArg>-Xmx1024m</jvmArg>
+                    </jvmArgs>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
